@@ -1,0 +1,31 @@
+Script started on 2022-10-24 11:47:19+10:30 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="120" LINES="30"]
+^[[A]0;uwsl@ROOM-PC: /mnt/f/workspace/Full-Stack-Open-Part12/script-answers[01;32muwsl@ROOM-PC[00m:[01;34m/mnt/f/workspace/Full-Stack-Open-Part12/script-answers[00m$ exitdocker exec -it todo-backend-redis-1 bash
+[?2004hroot@5b9f8010e184:/data#
+[Kroot@5b9f8010e184:/data# exitredis-cli KEYS *
+[?2004l
+1) "added_todos"
+[?2004hroot@5b9f8010e184:/data# redis-cli KEYS *      GET added_todos
+[?2004l
+"1"
+[?2004hroot@5b9f8010e184:/data# redis-cli GET added_todos[1P[1@SET added_todos "9001"
+[?2004l
+OK
+[?2004hroot@5b9f8010e184:/data# redis-cli SET added_todos "9001"[7PGET added_todos
+[?2004l
+"9002"
+[?2004hroot@5b9f8010e184:/data# redis-cli GET added_todos[1P[1P[1P[1@D[1@E[1@L
+[?2004l
+(integer) 1
+[?2004hroot@5b9f8010e184:/data# redis-cli DEL added_todosGET added_todosSET added_todos "9001"[7PGET added_todos[9PKEYS *
+[?2004l
+1) "added_todos"
+[?2004hroot@5b9f8010e184:/data# redis-cli KEYS *DEL added_todosGET added_todos
+[?2004l
+"1"
+[?2004hroot@5b9f8010e184:/data# exit
+[?2004l
+exit
+]0;uwsl@ROOM-PC: /mnt/f/workspace/Full-Stack-Open-Part12/script-answers[01;32muwsl@ROOM-PC[00m:[01;34m/mnt/f/workspace/Full-Stack-Open-Part12/script-answers[00m$ exit
+exit
+
+Script done on 2022-10-24 11:50:26+10:30 [COMMAND_EXIT_CODE="0"]
