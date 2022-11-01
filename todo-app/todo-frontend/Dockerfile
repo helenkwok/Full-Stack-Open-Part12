@@ -1,3 +1,7 @@
+# docker build . -t todo-frontend
+
+# docker run -p 5000:80 todo-frontend
+
 FROM node:16 AS base
 
 WORKDIR /usr/src/app
