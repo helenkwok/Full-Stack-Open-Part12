@@ -1,7 +1,3 @@
-# docker build -f ./dev.Dockerfile -t todo-frontend-dev .
-
-# docker run -p 3000:3000 -v "$(pwd):/usr/src/app/" todo-frontend-dev
-
 FROM node:16
 
 WORKDIR /usr/src/app
